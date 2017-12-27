@@ -27,3 +27,15 @@ For more please see examples folder
 The AI is a simple implementation of a basic board evaluation. The AI is trying every moves possible confirming the board value is better for a given move. The search depth can be configured, and due to it's high CPU intensivity it is recommended to use it with webworkers in browsers, and run it as a seperate process or thread in nodejs if required.
 
 The example use of the AI is documented under examples/ folder.
+
+AI REPO:
+https://github.com/azarus/chesslib-ai
+
+### License:
+
+Apache 2.0
+
+
+### Got an issue or question?
+
+Open an issue!
