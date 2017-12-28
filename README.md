@@ -3,7 +3,7 @@ Fast &amp; universal chesslibrary with Basic AI support
 
 
 ## Install:
-npm install @chesslib/core
+`npm install @chesslib/core`
 https://www.npmjs.com/package/@chesslib/core
 
 ## API (Basic)
