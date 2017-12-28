@@ -20,7 +20,7 @@ gulp.task('lift', ["compile"], function()
 });
 
 
-gulp.task('compile', ["chess-compile", "client-compile"]);
+gulp.task('compile', ["chess-compile"]);
 
 // Compile full bundle Chess + Chessboard
 gulp.task("chess-compile", function ()
@@ -33,25 +33,6 @@ gulp.task("chess-compile", function ()
         tsResults.dts.pipe(gulp.dest('./build/Chess/')),
         tsResults.js.pipe(sourcemaps.write('./')).pipe(gulp.dest('./build/Chess/'))
 	 ]);
-
-});
-
-// Compile full bundle Chess + Chessboard
-gulp.task("client-compile", function ()
-{
-	var bundler = browserify({
-		debug: true,
-	})
-		.add('source/client.ts')
-		.plugin(tsify, workerProject.compilerOptions);
-	
-	return bundler.bundle()
-		.on('error', function (error) { console.error(error.toString()); })
-		.pipe(source('client.js'))
-		.pipe(buffer())
-		.pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest("./build/client/"));
 
 });
 
