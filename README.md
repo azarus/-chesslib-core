@@ -9,7 +9,7 @@ https://www.npmjs.com/package/@chesslib/core
 
 ## API (Basic)
 
-```
+```typescript
 import { Chessboard, Positions } from "@chesslib/core";
 
 var board = Chessboard.fromPosition(Positions.default);
