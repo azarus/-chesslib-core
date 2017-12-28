@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "baseUrl": "./",
+	"noLib": false,
+	"rootDir": "./source/",
+	"removeComments": false,
+	"emitDecoratorMetadata": true,
+	"noImplicitAny": false,
+	"experimentalDecorators": true,
+	"sourceMap": true,
+	"noResolve": false,
+    "module": "commonjs",
+	"moduleResolution": "node",
+    "types": [],
+	"target": "es5",
+	"declaration": true
+  }
+}
