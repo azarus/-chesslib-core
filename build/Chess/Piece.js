@@ -54,7 +54,6 @@ var Piece = /** @class */ (function () {
         this.moves = 0;
         this.index = null;
         this.pieceTimer = null;
-        this.moveDelay = 5000;
         this.lastMoved = 0;
         this.board = board;
         this.setSquare(square);
@@ -123,8 +122,8 @@ var Piece = /** @class */ (function () {
         square.setPiece(null);
     };
     Piece.prototype.getAllowedMoves = function () {
-        if (this.lastMoved > Date.now() - this.moveDelay)
-            return [];
+        // if(this.lastMoved > Date.now() - this.moveDelay)
+        // 	return [];
         return this.getLegalMoves();
     };
     Piece.prototype.getLegalMoves = function () {

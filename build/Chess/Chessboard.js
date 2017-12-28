@@ -22,6 +22,7 @@ var Chessboard = /** @class */ (function () {
         this.history = [];
         this.squares = new Array();
         this.onPromote = new Utils_1.ChessEventEmitter();
+        this.onCastled = new Utils_1.ChessEventEmitter();
         this.boardSize.x = sizeX;
         this.boardSize.y = sizeY;
         this.reset();

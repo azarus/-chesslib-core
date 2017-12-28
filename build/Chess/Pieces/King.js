@@ -11,6 +11,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Piece_1 = require("../Piece");
+var _1 = require("../");
 var KingPiece = /** @class */ (function (_super) {
     __extends(KingPiece, _super);
     function KingPiece() {
@@ -89,6 +90,7 @@ var KingPiece = /** @class */ (function (_super) {
         // });
         //this.setCastling(rookSquare, kingSquare, current, castlingSquare);
         rookSquare.piece.move(kingSquare);
+        this.board.onCastled.emit(new _1.ChessMoveEvent(this.board.SquareToFEN(rookSquare), this.board.SquareToFEN(kingSquare)));
         return _super.prototype.move.call(this, castlingSquare);
     };
     return KingPiece;

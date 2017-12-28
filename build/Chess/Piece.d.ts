@@ -20,7 +20,6 @@ export declare class Piece {
     moves: number;
     index: any;
     pieceTimer: any;
-    moveDelay: number;
     lastMoved: number;
     constructor(board: any, square: any);
     initialize(): void;

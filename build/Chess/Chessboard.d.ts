@@ -23,6 +23,7 @@ export declare class Chessboard {
     history: any[];
     squares: any[];
     onPromote: ChessEventEmitter;
+    onCastled: ChessEventEmitter;
     constructor(sizeX?: number, sizeY?: number);
     static fromPosition(position: any): Chessboard;
     clone(): Chessboard;

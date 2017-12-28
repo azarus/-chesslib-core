@@ -13,12 +13,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Utils_1 = require("./Utils");
 var ChessMoveEvent = /** @class */ (function (_super) {
     __extends(ChessMoveEvent, _super);
-    function ChessMoveEvent(from, to) {
+    function ChessMoveEvent(from, to, time) {
+        if (time === void 0) { time = 0; }
         var _this = _super.call(this) || this;
         _this.from = null;
         _this.to = null;
+        _this.time = null;
         _this.from = from;
         _this.to = to;
+        _this.time = time;
         return _this;
     }
     return ChessMoveEvent;

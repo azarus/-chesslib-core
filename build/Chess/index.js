@@ -4,6 +4,7 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./Chessboard"));
+__export(require("./RTSChessboard"));
 __export(require("./Square"));
 __export(require("./Piece"));
 __export(require("./Positions"));
