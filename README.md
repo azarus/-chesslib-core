@@ -1,24 +1,41 @@
-# Chess
+# @chesslib/core
+Fast &amp; universal chesslibrary with Basic AI support
 
-Fast & universal chesslibrary with Basic AI support
 
-## API
+## Install:
+`npm install @chesslib/core`
 
-ES6/Typescript
+https://www.npmjs.com/package/@chesslib/core
 
-```
+## API (Basic)
+
+```typescript
 import { Chessboard, Positions } from "@chesslib/core";
 
 var board = Chessboard.fromPosition(Positions.default);
 
 // Get all possible moves
 var moves = board.getFENMoves();
-if(chess.tryMoveFEN(moves[0].from, moves[0].to))
+if(board.tryMoveFEN(moves[0].from, moves[0].to))
 {
-	console.log("Move was valid");
+    console.log("Move was valid");
 }
 ```
+For more please see examples folder
 
-## GAME STATE
-This chess library does not include moves that prevent the king moving into check, it is up to you to implement what chess logic you wish to use.
-Winning & Losing checks are also up to you to implement.
+## Chess AI
+
+The AI is a simple implementation of a basic board evaluation. The AI is trying every moves possible confirming the board value is better for a given move. The search depth can be configured, and due to it's high CPU intensivity it is recommended to use it with webworkers in browsers, and run it as a seperate process or thread in nodejs if required.
+
+AI REPO:
+https://github.com/azarus/chesslib-ai
+The example use of the AI is available in the repo under examples/ folder.
+
+### License:
+
+Apache 2.0
+
+
+### Got an issue or question?
+
+Open an issue!
