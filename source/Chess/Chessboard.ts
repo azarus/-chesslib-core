@@ -40,6 +40,7 @@ export class Chessboard
 	squares = new Array();
 
 	onPromote = new ChessEventEmitter();
+	onCastled = new ChessEventEmitter();
 	
 	constructor(sizeX=8, sizeY=8)
 	{

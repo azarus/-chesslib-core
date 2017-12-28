@@ -4,13 +4,15 @@ export class ChessMoveEvent extends ChessEvent
 {
 	from = null;
 	to = null;
+	time = null;
 
-	constructor(from, to)
+	constructor(from, to, time = 0)
 	{
 		super();
 
 		this.from = from;
 		this.to = to;
+		this.time = time;
 	}
 };
 

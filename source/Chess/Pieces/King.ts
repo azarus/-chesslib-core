@@ -1,4 +1,5 @@
 import { Piece, MovementVectors } from "../Piece";
+import { ChessMoveEvent } from "../";
 
 export class KingPiece extends Piece
 {
@@ -90,7 +91,7 @@ export class KingPiece extends Piece
 		// });
 		//this.setCastling(rookSquare, kingSquare, current, castlingSquare);
 		rookSquare.piece.move(kingSquare);
-		
+		this.board.onCastled.emit(new ChessMoveEvent(this.board.SquareToFEN(rookSquare), this.board.SquareToFEN(kingSquare)));
 		return super.move(castlingSquare);
 	}
 	

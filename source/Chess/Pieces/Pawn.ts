@@ -37,7 +37,7 @@ export class PawnPiece extends Piece
 		{
 			var newPiece = this.board.createPiece("Q", this.color);
 			newPiece.setSquare(this.square);
-
+			newPiece.lastMoved = Date.now();
 			this.board.onPromote.emit(new ChessPromoteEvent(this.square, newPiece,  this.board.SquareToFEN(this.square)));
 		}
 

@@ -58,7 +58,6 @@ export class Piece
 	
 	pieceTimer = null;
 
-	moveDelay = 5000;
 	lastMoved = 0;
 
 	constructor(board, square)
@@ -163,8 +162,8 @@ export class Piece
 
 	getAllowedMoves()
 	{
-		if(this.lastMoved > Date.now() - this.moveDelay)
-			return [];
+		// if(this.lastMoved > Date.now() - this.moveDelay)
+		// 	return [];
 		return this.getLegalMoves();
 	}
 
