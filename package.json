@@ -1,6 +1,6 @@
 {
 	"name": "@chesslib/core",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"description": "Fast & universal chesslibrary with Basic AI support",
 	"url": "https://github.com/azarus/chesslib-core",
 	"main": "./build/Chess/index.js",
