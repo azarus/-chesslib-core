@@ -1,8 +1,13 @@
 {
 	"name": "@chesslib/core",
-	"version": "1.1.6",
-	"description": "Fast & universal chesslibrary with Basic AI support",
+	"version": "1.1.9",
+	"description": "A fast &amp; universal chesslibrary with Basic AI support. This is the core part of the @chesslib bundle.",
 	"url": "https://github.com/azarus/chesslib-core",
+	"homepage": "https://github.com/azarus/chesslib-core",
+	"repository": {
+		"type": "git", 
+		"url": "git+https://github.com/azarus/chesslib-core.git"
+	},
 	"main": "./build/Chess/index.js",
 	"types": "types.ts",
 	"scripts": {
